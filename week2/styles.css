@@ -1,0 +1,22 @@
+/* Default light theme styles */
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+/* Subtitle default blue */
+h2 {
+  color: #006EB6;
+}
+
+/* Dark theme styles */
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+
+.dark h2 {
+  color: #89CFF0; 
+}
