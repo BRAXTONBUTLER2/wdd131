@@ -3,24 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Braxton's Theme Switcher</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Welcome to Braxton's Projects</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/white-wall-3.png'), rgba(255, 255, 255, 0.5);
+      background-blend-mode: lighten;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      backdrop-filter: blur(10px);
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
-
-  <select id="theme-selector">
-    <option value="light">Light</option>
-    <option value="dark">Dark</option>
-  </select>
-
-  <h1>Welcome to Braxton's Website!</h1>
-  <h2>This is the subtitle, try out our dark mode!</h2>
-
-  
-  <img id="logo" src="images/BYUILOGOBLACK.png" alt="BYUI Logo" />
-
-
- 
-  <script src="mission.js" defer></script>
+  <div class="container">
+    <h1>Welcome to Braxton's Projects</h1>
+    <ul>
+      <li><a href="dom-basics.html">DOM Basics</a></li>
+      <li><a href="example2.html">Example 2</a></li>
+      <li><a href="running.html">Running</a></li>
+      <li><a href="week2darktheme.html">Week 2 Dark Theme</a></li>
+    </ul>
+  </div>
 </body>
 </html>
