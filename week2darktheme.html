@@ -16,11 +16,29 @@
   <h1>Welcome to Braxton's Website!</h1>
   <h2>This is the subtitle, try out our dark mode!</h2>
 
-  
-  <img id="logo" src="images/BYUILOGOBLACK.png" alt="BYUI Logo" />
+  <img id="logo" src="BYUILOGOBLACK.png" alt="BYUI Logo" />
 
-
- 
   <script src="mission.js" defer></script>
+
+  <script>
+    const themeSelector = document.getElementById("theme-selector");
+    const logo = document.getElementById("logo");
+
+    function changeTheme() {
+      if (themeSelector.value === "dark") {
+        logo.src = "BYUILOGOWHITE.png";
+        document.body.style.backgroundColor = "#333";
+        document.body.style.color = "#fff";
+      } else {
+        logo.src = "BYUILOGOBLACK.png";
+        document.body.style.backgroundColor = "#fff";
+        document.body.style.color = "#000";
+      }
+    }
+
+    themeSelector.addEventListener("change", changeTheme);
+    changeTheme();
+  </script>
+
 </body>
 </html>
