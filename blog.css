@@ -1,140 +1,81 @@
-/* General Reset and Base Styles */
-* {
-  box-sizing: border-box;
+/* Reset and base styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #473144;
-  background-color: #fff;
-  padding: 1rem;
-}
-
-h1, h2 {
-  font-family: 'Lora', serif;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-.skiptocontent a {
+.skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #AF1B3F;
-  color: white;
+  background: #000;
+  color: #fff;
   padding: 8px;
   z-index: 100;
-  text-decoration: none;
 }
 
-.skiptocontent a:focus {
+.skip-link:focus {
   top: 0;
 }
 
-/* Header Styles */
+/* Header */
 header {
-  text-align: center;
-  padding: 1rem 0;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #AF1B3F;
-  padding-bottom: 0.5rem;
-}
-
-nav {
-  border-top: 2px solid #EFC69B;
-  border-bottom: 2px solid #EFC69B;
-  padding: 0.5rem 0;
-  max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 nav ul {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  justify-content: end;
   list-style: none;
-  gap: 1rem;
-}
-
-nav li a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #AF1B3F;
-}
-
-/* Layout Grids */
-.layout {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  margin-top: 2rem;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.articles {
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* Article Grid */
-article {
-  display: grid;
-  grid-template-columns: 150px 1fr;
   gap: 1rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 1rem;
 }
 
-.article-details {
-  font-size: 0.9rem;
-  color: #666;
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
-.article-details .date {
-  font-weight: bold;
-  font-size: 1.1rem;
+/* Articles */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.article-content h2 {
-  color: #AF1B3F;
-  margin-bottom: 0.5rem;
-}
-
-.article-content p {
-  margin-top: 0.5rem;
-}
-
-
-.filters {
-  background-color: #f9f9f9;
-  padding: 1rem;
+article {
   border: 1px solid #ccc;
-  height: fit-content;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f9f9f9;
 }
 
-.filters p {
-  font-style: italic;
-  color: #999;
+article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 2px solid #EFC69B;
+article h2 {
+  margin: 0.5rem 0;
+}
+
+.meta {
   font-size: 0.9rem;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
