@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Recipe book with delicious, responsive, and accessible design." />
-    <meta name="author" content="Your Name" />
-
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="Recipe Book" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Discover tasty and easy-to-follow recipes!" />
-    <meta property="og:image" content="images/apple-crisp.jpg" />
-    <meta property="og:url" content="https://yourgithubusername.github.io/wdd131/recipes/" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <title>Recipe Book</title>
-    <link rel="icon" href="images/recipe-book.png" />
-    <link rel="stylesheet" href="recipes.css" />
-  </head>
-  <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
-    <header>
-      <img src="images/recipe-book.png" alt="Recipe Book Icon" />
-      <h1>Recipe<span>Book</span></h1>
-    </header>
-
-    <main id="main">
-      <form class="search">
-        <label for="find">Find a recipe</label>
-        <input type="text" id="find" placeholder="Find a recipe" />
-        <button type="submit">🔍</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="RecipeBook">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Website for all the recipes">
+  <meta property="og:image" content="https://www.flaticon.com/free-icons/recipe">
+  <meta name="author" content="Yat Lam">
+  <title>RecipeBook</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="stylesheet" href="./recipes.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./main.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <img src="./images/recipe-book.png" alt="Recipe Book logo">
+      <h1 class="web-name">RecipeBook</h1>
+    </div>
+    <div class="search-container">
+      <form>
+        <input id="search-input" type="text" name="search" placeholder="Find a recipe">
+        <button id="search-button" type="button"><i class="fa fa-search"></i></button>
       </form>
+    </div>
+    <hr>
+  </header>
 
-      <section class="recipe">
-        <img src="images/apple-crisp.jpg" alt="Apple Crisp" />
-        <div class="text">
-          <p class="category">dessert</p>
-          <h2>Apple Crisp</h2>
+  <main>
+    <div class="recipes">
+      <div class="recipe">
+        <img class="food-img" src="./images/apple-crisp.jpg" alt="Image of Apple Crisp">
+        <div class="detail">
+          <h3 class="category">dessert</h3>
+          <h2 class="dessert-name">Apple Crisp</h2>
           <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-            <span aria-hidden="true">⭐</span><span aria-hidden="true">⭐</span><span aria-hidden="true">⭐</span><span aria-hidden="true">⭐</span><span aria-hidden="true">☆</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+            <span aria-hidden="true" class="icon-star-empty">☆</span>
           </span>
-          <p class="description">This apple crisp recipe is made with tender apples and a brown sugar oat topping. Serve warm with vanilla ice cream.</p>
+          <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
         </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="social">
-        <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
-        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
-        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
-        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
       </div>
-      <p style="font-size: 0.6em">
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
-      </p>
-    </footer>
+    </div>
+  </main>
 
-    <script type="module" src="main.js"></script>
-  </body>
+  <footer>
+    <div id="footer">
+      <div id="social">
+        <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+        <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+        <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+      </div>
+      <div id="reference">
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
