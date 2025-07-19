@@ -1,0 +1,174 @@
+:root {
+  --color-bg: #121212;
+  --color-surface: #1f1f1f;
+  --color-accent: #00ff00;
+  --color-text: #ffffff;
+}
+.light-theme {
+  --color-bg: #ffffff;
+  --color-surface: #f2f2f2;
+  --color-accent: #00ff00;
+  --color-text: #121212;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Roboto Mono', monospace;
+}
+header {
+  background: var(--color-surface);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  height: 70px;
+}
+.site-title {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--color-text);
+  position: relative;
+}
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+}
+main { padding: 1rem; }
+.slideshow-container {
+  width: 60%;
+  max-width: 600px;
+  aspect-ratio: 1.2 / 1;
+  margin: 2rem auto;
+  position: relative;
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+.slideshow-container img.fade-out {
+  opacity: 0;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.prev-btn { left: 0.5rem; }
+.next-btn { right: 0.5rem; }
+.slide-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+.other-highlights ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+.other-highlights li { margin: 0.5rem 0; }
+.other-highlights a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+}
+footer {
+  background: var(--color-surface);
+  text-align: center;
+  padding: 1rem;
+}
+footer p { font-size: 0.9rem; }
+/* CHILD PAGE CARD GRID STYLES */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #1e1e1e; /* Slightly lighter/darker than main background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.4;
+}
